@@ -1,0 +1,48 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 550px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-grid-container {
+    width: 450px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+}
+
+.color-item {
+    display: flex;
+}
+
+.color {
+    min-height: 70%;
+}
+
+.color-col-1 {
+    background: #F55A5A;
+}
+
+.color-col-2 {
+    background: #2B283A;
+}
+
+.color-col-3 {
+    background: #FBF3AB;
+}
+
+.color-col-4 {
+    background: #AAD1B6;
+}
+.color-col-5 {
+    background: #A626D3;
+}
