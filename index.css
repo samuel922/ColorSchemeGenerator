@@ -1,10 +1,20 @@
+*,*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
+    font-family: "Inter", sans-serif;
 }
 
 .container {
-    max-width: 550px;
+    max-width: 915px;
+    min-height: 100vh;
+    overflow: hidden;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -13,19 +23,29 @@ html, body {
 }
 
 .color-grid-container {
-    width: 450px;
-    height: 450px;
+    /* background: red; */
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+    
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(5, 150px);
+
 }
 
 .color-item {
-    display: flex;
+    /* background: #A626D3; */
+    height: 550px;
+    border: none;
+    cursor: pointer;
 }
 
 .color {
-    min-height: 70%;
+    height: 90%;
+}
+
+
+input {
+    display: block;
+    padding: 1em;
 }
 
 .color-col-1 {
@@ -45,4 +65,15 @@ html, body {
 }
 .color-col-5 {
     background: #A626D3;
+}
+
+.text-cont {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-cont p {
+    align-self: center;
 }
