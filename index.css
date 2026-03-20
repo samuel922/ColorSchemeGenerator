@@ -5,10 +5,20 @@
     box-sizing: border-box;
 }
 
+:root {
+  --color-background-primary: #F4F3EE;  
+  --color-border-secondary: #B1ADA1;    
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #666;
+  --color-text-success: #1d9e75;
+  --color-background-white: #fff;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
+    background: var(--color-background-primary);
 }
 
 .container {
@@ -27,6 +37,7 @@ html, body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 4fr;
+    background: var(--color-background-white);
 }
 
 .header {
@@ -45,11 +56,43 @@ html, body {
 }
 .color-grid-container {
     /* background: red; */
+    position: relative;
     
     
     display: grid;
     grid-template-columns: repeat(5, 150px);
 
+}
+
+.notifier {
+    width: 200px;
+    padding: 1em 2em;
+    position: absolute;
+    top: 5em;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    border: 0.5px solid #e0e0e0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    pointer-events: none;
+    z-index: 999;
+    min-width: 180px;
+}
+
+.hidden {
+    display: none;
+}
+
+#notifier.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .color-item {
@@ -93,11 +136,9 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-.text-cont p {
-    align-self: center;
-}
 
 button,
 select {
@@ -112,3 +153,15 @@ select {
 button {
     cursor: pointer;
 }
+
+input {
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-align: center;
+    font-size: 1em;
+}
+
+input:focus {
+    outline: none;
+} 
