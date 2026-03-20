@@ -22,9 +22,30 @@ html, body {
     align-items: center;
 }
 
+.box {
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 4fr;
+}
+
+.header {
+    padding: 0.6em 1em 0;
+    display: grid;
+    grid-template-columns: 100px 1fr 250px;
+    column-gap: 1em;
+    /* align-items: center; */
+    /* place-items: center; */
+    grid-auto-rows: 50px;
+}
+.head-color-box {
+    /* width: 61px; */
+    background: red;
+    border: 1px solid #D1D5DB;
+}
 .color-grid-container {
     /* background: red; */
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+    
     
     display: grid;
     grid-template-columns: repeat(5, 150px);
@@ -76,4 +97,10 @@ input {
 
 .text-cont p {
     align-self: center;
+}
+
+button,
+select {
+    background: transparent;
+    border: 1px solid #D1D5DB;
 }
